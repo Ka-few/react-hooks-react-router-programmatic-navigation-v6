@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Login() {
+  const login = useOutletContext()
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -15,6 +16,7 @@ function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
+    login()
   }
 
   return (
